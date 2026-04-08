@@ -3,13 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <title>Life Music</title>
+
 <style>
-body { font-family: Arial; margin: 0; background: #f5f5f5; }
-header { background: black; color: white; padding: 20px; text-align: center; }
-.container { padding: 20px; }
-.producto { background: white; padding: 15px; margin: 10px; border-radius: 10px; }
-button { background: green; color: white; padding: 10px; border: none; border-radius: 5px; width: 100%; cursor: pointer; }
-button:hover { background: darkgreen; }
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #111;
+  color: white;
+}
+
+header {
+  background: linear-gradient(90deg, black, #222);
+  padding: 25px;
+  text-align: center;
+}
+
+h1 { margin: 0; }
+
+.container {
+  padding: 20px;
+}
+
+.categoria {
+  margin-top: 30px;
+  font-size: 22px;
+  border-bottom: 2px solid #444;
+}
+
+.producto {
+  background: #1c1c1c;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.producto:hover {
+  transform: scale(1.02);
+  background: #222;
+}
+
+button {
+  background: #25D366;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1ebe5d;
+}
+
+.info {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
 </style>
 </head>
 
@@ -24,7 +77,14 @@ button:hover { background: darkgreen; }
 
 <div class="container">
 
-<h2>Productos</h2>
+<div class="info">
+<p><b>Opciones de compra:</b></p>
+<p>✔️ Retiro en el local</p>
+<p>✔️ Envíos a cargo del cliente</p>
+<p>✔️ Coordinación por WhatsApp</p>
+</div>
+
+<h2 class="categoria">🎸 Instrumentos</h2>
 
 <div class="producto">
 <h3>Guitarra Criolla</h3>
@@ -32,17 +92,14 @@ button:hover { background: darkgreen; }
 <button onclick="consultar('Guitarra Criolla')">Consultar por WhatsApp</button>
 </div>
 
+<h2 class="categoria">🎻 Accesorios</h2>
+
 <div class="producto">
 <h3>Cuerdas para guitarra</h3>
 <p>$8.500</p>
 <button onclick="consultar('Cuerdas para guitarra')">Consultar por WhatsApp</button>
 </div>
 
-<div class="producto">
-<h3>Afinador digital</h3>
-<p>$15.000</p>
-<button onclick="consultar('Afinador digital')">Consultar por WhatsApp</button>
-</div>
 <div class="producto">
 <h3>Afinador para Instrumentos</h3>
 <p>$15000</p>
@@ -60,6 +117,7 @@ button:hover { background: darkgreen; }
 <p>$12000</p>
 <button onclick="consultar('Cable para micrófono XLR (Canon) Macho a Plug 5.4mts')">Consultar por WhatsApp</button>
 </div>
+
 </div>
 
 <script>
